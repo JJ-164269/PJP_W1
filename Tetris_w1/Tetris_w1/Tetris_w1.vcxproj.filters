@@ -26,5 +26,8 @@
     <ClInclude Include="DrawingCases.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DisplayFigures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
