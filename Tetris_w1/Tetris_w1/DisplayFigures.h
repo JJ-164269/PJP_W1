@@ -6,9 +6,6 @@ int start_y1 = 480;
 int d;
 
 void Display_Case(int d) {
-	//ALLEGRO_BITMAP *display_section = NULL;
-	//display_section = al_load_bitmap("display_section.bmp");
-	//al_set_target_bitmap( display_section);
 	if (d == 1) {
 		al_draw_filled_rectangle(start_x1, start_y1, start_x1 + 32, start_y1 + 32, al_map_rgb(255, 0, 0));
 		al_draw_filled_rectangle(start_x1 + 32, start_y1, start_x1 + 64, start_y1 + 32, al_map_rgb(255, 0, 0));
