@@ -8,7 +8,13 @@
 #include "DisplayFigures.h"
 #include "DrawingCases.h"
 
-
+/// zmiana w wyœwietlaniu nastêpnej figury, zamiast rysowania, u¿ywaj 7 ró¿nych bitmap
+/// potem usuwaj bitmape i wtedy kolejn¹ wyœwietlaj itd
+/// jak sprawiæ by figura która opad³a do do³u ni porusza³a siê ju¿ jak bd sterowaæ koljn¹;
+/// mo¿e 7 ró¿nych par x i y
+/// ale co jak kolejny element o tym samym kszta³cie bd u¿yty ???
+/// zrobie macierz 0/1 ; 1 jeœli tam coœ jest 
+/// jak usuwaæ ¿eby wiersz 
 
 int main(void) {
 
