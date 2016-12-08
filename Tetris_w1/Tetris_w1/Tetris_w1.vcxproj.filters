@@ -29,5 +29,8 @@
     <ClInclude Include="DisplayFigures.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DestroyFigures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -129,6 +129,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DestroyFigures.h" />
     <ClInclude Include="DisplayFigures.h" />
     <ClInclude Include="DrawingCases.h" />
   </ItemGroup>

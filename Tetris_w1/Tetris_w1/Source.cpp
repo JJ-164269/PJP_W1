@@ -1,15 +1,10 @@
-#include <allegro5\allegro.h>
-#include <allegro5\allegro_primitives.h>
-#include <allegro5\allegro_image.h>
-#include <allegro5\allegro_native_dialog.h>
 #include <time.h>
 #include <stdlib.h>
 
 #include "DisplayFigures.h"
 #include "DrawingCases.h"
+#include "DestroyFigures.h"
 
-/// zmiana w wyœwietlaniu nastêpnej figury, zamiast rysowania, u¿ywaj 7 ró¿nych bitmap
-/// potem usuwaj bitmape i wtedy kolejn¹ wyœwietlaj itd
 /// jak sprawiæ by figura która opad³a do do³u ni porusza³a siê ju¿ jak bd sterowaæ koljn¹;
 /// mo¿e 7 ró¿nych par x i y
 /// ale co jak kolejny element o tym samym kszta³cie bd u¿yty ???
@@ -41,7 +36,6 @@ int main(void) {
 	ALLEGRO_DISPLAY *display = NULL;
 	ALLEGRO_EVENT_QUEUE *event_queue = NULL;
 	ALLEGRO_BITMAP *plansza = NULL;
-	ALLEGRO_BITMAP *display_section = NULL;
 	ALLEGRO_TIMER *timer = NULL;
 
 	al_init();
@@ -62,26 +56,16 @@ int main(void) {
 	//al_register_event_source(event_queue, al_get_timer_event_source(timer));
 
 	
+	al_clear_to_color(al_map_rgb(0, 0, 50));
+	plansza = al_load_bitmap("plansza1.bmp");
+	al_draw_bitmap(plansza, 20, 20, 0);
+	al_draw_rectangle(16, 16, 344, 664, al_map_rgb(190, 190, 190), 4);
+	al_draw_rectangle(366, 432, 564, 664, al_map_rgb(190, 190, 190), 4);
+	Display_Section(array1[0]);
+	al_flip_display();
+
 	//al_start_timer(timer);
 	while (!done) {
-		
-		al_clear_to_color(al_map_rgb(0, 0, 50));
-		plansza = al_load_bitmap("plansza1.bmp");
-		display_section = al_load_bitmap("display_section.bmp");
-		al_draw_bitmap(plansza, 20, 20, 0);
-		al_draw_bitmap(display_section, 370, 436, 0);
-		al_draw_rectangle(16, 16, 344, 664, al_map_rgb(190, 190, 190), 4);
-		al_draw_rectangle(366, 432, 564, 664, al_map_rgb(190, 190, 190), 4);
-
-
-		Display_Case(array1[0]);
-
-
-
-		al_flip_display();
-	
-
-
 		
 		ALLEGRO_EVENT ev;
 		al_wait_for_event(event_queue, &ev);
@@ -89,7 +73,6 @@ int main(void) {
 		if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE && ev.type == ALLEGRO_EVENT_KEY_UP)
 			done = true;
 
-		
 		
 		if (ev.keyboard.keycode == ALLEGRO_KEY_ENTER && ev.type == ALLEGRO_EVENT_KEY_UP) {
 			
@@ -102,16 +85,15 @@ int main(void) {
 			
 			al_clear_to_color(al_map_rgb(0, 0, 50));
 			plansza = al_load_bitmap("plansza1.bmp");
-			display_section = al_load_bitmap("display_section.bmp");
 			al_draw_bitmap(plansza, 20, 20, 0);
-			al_draw_bitmap(display_section, 370, 436, 0);
 			al_draw_rectangle(16, 16, 344, 664, al_map_rgb(190, 190, 190), 4);
 			al_draw_rectangle(366, 432, 564, 664, al_map_rgb(190, 190, 190), 4);
 
 			Draw_Case(array1[0 + a]);
-			Display_Case(array1[1 + a]);
+			Destroy_Section(array1[0 + a]);
+			Display_Section(array1[1 + a]);
 			al_flip_display();
-			al_rest(2);
+			al_rest(1);
 			
 
 		}
@@ -125,8 +107,6 @@ int main(void) {
 	al_destroy_event_queue(event_queue);
 	al_destroy_display(display);
 	al_destroy_bitmap(plansza);
-	al_destroy_bitmap(display_section);
-
 
 	return 0;
 
