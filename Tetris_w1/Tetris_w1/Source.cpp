@@ -24,7 +24,6 @@ int main(void) {
 	int width = 580;
 	int height = 680;
 	int FPS = 60;
-	//int now;
 	int a = 0;
 
 
@@ -50,10 +49,10 @@ int main(void) {
 	al_install_keyboard();
 
 	event_queue = al_create_event_queue();
-	//timer = al_create_timer(1.0 / FPS);
+	timer = al_create_timer(30.0 / FPS);
 
 	al_register_event_source(event_queue, al_get_keyboard_event_source());
-	//al_register_event_source(event_queue, al_get_timer_event_source(timer));
+	al_register_event_source(event_queue, al_get_timer_event_source(timer));
 
 	
 	al_clear_to_color(al_map_rgb(0, 0, 50));
@@ -61,23 +60,40 @@ int main(void) {
 	al_draw_bitmap(plansza, 20, 20, 0);
 	al_draw_rectangle(16, 16, 344, 664, al_map_rgb(190, 190, 190), 4);
 	al_draw_rectangle(366, 432, 564, 664, al_map_rgb(190, 190, 190), 4);
-	Display_Section(array1[0]);
+	Display_Section(array1[a]);
 	al_flip_display();
 
-	//al_start_timer(timer);
+	al_start_timer(timer);
+
 	while (!done) {
 		
 		ALLEGRO_EVENT ev;
 		al_wait_for_event(event_queue, &ev);
 
-		if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE && ev.type == ALLEGRO_EVENT_KEY_UP)
+		if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE && ev.type == ALLEGRO_EVENT_KEY_UP) {
 			done = true;
-
+			break;
+		}
+		
 		
 		if (ev.keyboard.keycode == ALLEGRO_KEY_ENTER && ev.type == ALLEGRO_EVENT_KEY_UP) {
 			
 			 ruch = true;
 			 a++;
+		}
+
+		if (ev.type == ALLEGRO_EVENT_TIMER) {
+			if (array1[a] == 1 || array1[a] == 3 || array1[a] == 4 || array1[a] == 5 || array1[a] == 6 || array1[a] == 7) {
+				if (start_y <= 564) {
+					start_y += 32;
+				}
+			}
+			else if (array1[a] == 2) {
+				if (start_y <= 500) {
+					start_y += 32;
+				}
+			}
+
 		}
 		
 		if (!ruch)
@@ -89,11 +105,11 @@ int main(void) {
 			al_draw_rectangle(16, 16, 344, 664, al_map_rgb(190, 190, 190), 4);
 			al_draw_rectangle(366, 432, 564, 664, al_map_rgb(190, 190, 190), 4);
 
-			Draw_Case(array1[0 + a]);
-			Destroy_Section(array1[0 + a]);
+			Draw_Case(array1[a]);
+			Destroy_Section(array1[a]);
 			Display_Section(array1[1 + a]);
 			al_flip_display();
-			al_rest(1);
+			//al_rest(1);
 			
 
 		}
@@ -107,6 +123,7 @@ int main(void) {
 	al_destroy_event_queue(event_queue);
 	al_destroy_display(display);
 	al_destroy_bitmap(plansza);
+	al_destroy_timer(timer);
 
 	return 0;
 
