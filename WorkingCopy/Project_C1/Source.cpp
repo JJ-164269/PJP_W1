@@ -118,6 +118,7 @@ int main(void) {
 				break;
 			case ALLEGRO_KEY_ENTER:
 				ruch = true;
+				rotation_stage = 0;
 				a++;
 				break;
 			case ALLEGRO_KEY_ESCAPE:
@@ -126,13 +127,13 @@ int main(void) {
 			}
 		}
 
-		if (ev.type == ALLEGRO_EVENT_TIMER) {
+		/*if (ev.type == ALLEGRO_EVENT_TIMER) {
 
 				if (array1[a] == 1 || array1[a] == 3 || array1[a] == 4 || array1[a] == 5 || array1[a] == 6 || array1[a] == 7) {
 					if (y1 > 17) {
 						down = true;
 						a++;
-						x1 = 4;
+						x1 = 0;
 						y1 = 0;
 						Draw_Case(array1[a]);
 						// zmieniam na 8 
@@ -166,7 +167,7 @@ int main(void) {
 				}
 				
 		}
-		
+		*/
 		
 		if (!ruch)
 		{
@@ -178,7 +179,6 @@ int main(void) {
 			al_draw_rectangle(366, 432, 564, 664, al_map_rgb(190, 190, 190), 4);
 
 			Draw_Case(array1[a]);
-			//Destroy_Section(array1[a]);
 			Display_Section(array1[1 + a]);
 
 			al_flip_display();
