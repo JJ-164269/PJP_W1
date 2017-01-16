@@ -89,7 +89,9 @@ int main(void) {
 				}
 				
 				break;
-			//case ALLEGRO_KEY_UP:
+			case ALLEGRO_KEY_UP:
+				rotation_stage = (rotation_stage + 1) % 4;
+				break;
 			case ALLEGRO_KEY_RIGHT:
 				if (x1 < 8 && (array1[a] == 1 || array1[a] == 3 || array1[a] == 5)) {
 					x1 += 1;
@@ -135,12 +137,7 @@ int main(void) {
 						Draw_Case(array1[a]);
 						// zmieniam na 8 
 						// rysuje to co jest 8 
-						for (int i = 0; i < 10; i++) {
-							for (int j = 18; j < 20; j++) {
-									map[i][j] == FULL;
-									//al_draw_bitmap(block_full, i * 32 + 20, j * 32 + 20, 0);
-							}
-						}
+						
 					}
 					else {
 						down = false;

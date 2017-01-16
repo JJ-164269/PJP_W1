@@ -1,13 +1,11 @@
 ﻿  Source.cpp
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(58): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(71): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(89): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(112): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(135): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(159): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(182): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(205): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\source.cpp(140): warning C4553: '==': operator has no effect; did you intend '='?
-c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\source.cpp(156): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(331): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(354): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(377): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(400): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(424): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(447): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(470): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\source.cpp(153): warning C4553: '==': operator has no effect; did you intend '='?
   Project_C1.vcxproj -> C:\Users\JJ\Desktop\PJP_W1\WorkingCopy\Debug\Project_C1.exe
   Project_C1.vcxproj -> C:\Users\JJ\Desktop\PJP_W1\WorkingCopy\Debug\Project_C1.pdb (Partial PDB)
