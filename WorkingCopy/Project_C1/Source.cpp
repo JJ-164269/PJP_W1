@@ -127,7 +127,7 @@ int main(void) {
 			}
 		}
 
-		/*if (ev.type == ALLEGRO_EVENT_TIMER) {
+		if (ev.type == ALLEGRO_EVENT_TIMER) {
 
 				if (array1[a] == 1 || array1[a] == 3 || array1[a] == 4 || array1[a] == 5 || array1[a] == 6 || array1[a] == 7) {
 					if (y1 > 17) {
@@ -167,7 +167,7 @@ int main(void) {
 				}
 				
 		}
-		*/
+		
 		
 		if (!ruch)
 		{

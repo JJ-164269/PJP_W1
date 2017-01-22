@@ -1,4 +1,5 @@
 ﻿  Source.cpp
 c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\drawingcases.h(399): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\jj\desktop\pjp_w1\workingcopy\project_c1\source.cpp(154): warning C4553: '==': operator has no effect; did you intend '='?
   Project_C1.vcxproj -> C:\Users\JJ\Desktop\PJP_W1\WorkingCopy\Debug\Project_C1.exe
   Project_C1.vcxproj -> C:\Users\JJ\Desktop\PJP_W1\WorkingCopy\Debug\Project_C1.pdb (Partial PDB)
