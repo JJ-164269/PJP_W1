@@ -79,42 +79,16 @@ int main(void) {
 		if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
 			switch (ev.keyboard.keycode) {
 			case ALLEGRO_KEY_DOWN:
-				if (y1 < 15 && array1[a] == 2) {
-					y1 += 2;
-					break;
-				}
-				else if (y1 < 17) {
-					y1 += 2;
-					break;
-				}
-				
+				y1 += 2;
 				break;
 			case ALLEGRO_KEY_UP:
 				rotation_stage = (rotation_stage + 1) % 4;
 				break;
 			case ALLEGRO_KEY_RIGHT:
-				if (x1 < 8 && (array1[a] == 1 || array1[a] == 3 || array1[a] == 5)) {
-					x1 += 1;
-					break;
-				}
-				else if (x1 < 9 && array1[a] == 2) {
-					x1 += 1;
-					break;
-				}
-				else if (x1 < 7 && (array1[a] == 4 || array1[a] == 6 || array1[a] == 7)) {
-					x1 += 1;
-					break;
-				}
+				x1 += 1;
 				break;
 			case ALLEGRO_KEY_LEFT:
-				if (x1 > 0 && (array1[a] == 1 || array1[a] == 2 || array1[a] == 4 || array1[a] == 6 || array1[a] == 7)) {
-					x1 -= 1;
-					break;
-				}
-				else if (x1 > 1 && (array1[a] == 3 || array1[a] == 5)) {
-					x1 -= 1;
-					break;
-				}
+				x1 -= 1;
 				break;
 			case ALLEGRO_KEY_ENTER:
 				ruch = true;
@@ -127,7 +101,7 @@ int main(void) {
 			}
 		}
 
-		if (ev.type == ALLEGRO_EVENT_TIMER) {
+		/*if (ev.type == ALLEGRO_EVENT_TIMER) {
 
 				if (array1[a] == 1 || array1[a] == 3 || array1[a] == 4 || array1[a] == 5 || array1[a] == 6 || array1[a] == 7) {
 					if (y1 > 17) {
@@ -168,7 +142,7 @@ int main(void) {
 				
 		}
 		
-		
+		*/
 		if (!ruch)
 		{
 

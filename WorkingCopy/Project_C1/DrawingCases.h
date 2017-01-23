@@ -377,26 +377,33 @@ void Draw_Case(int c) {
 		for (int j = 0; j < 20; j++) {
 			if (map[i][j] == 1) {
 				al_draw_bitmap(block1, i * 32 + 20, j * 32 + 20, 0);
+				map[i][j - 1] == FREE;
 			}
 			else if (map[i][j] == 2) {
 				al_draw_bitmap(block2, i * 32 + 20, j * 32 + 20, 0);
+				map[i][j - 2] == FREE;
 			}
 			else if (map[i][j] == 3) {
 				al_draw_bitmap(block3, i * 32 + 20, j * 32 + 20, 0);
+				map[i][j - 2] == FREE;
 			}
 			else if (map[i][j] == 4) {
 				al_draw_bitmap(block4, i * 32 + 20, j * 32 + 20, 0);
+				map[i][j - 3] == FREE;
 			}
 			else if (map[i][j] == 5) {
 				al_draw_bitmap(block5, i * 32 + 20, j * 32 + 20, 0);
+				map[i][j - 2] == FREE;
 			}
 			else if (map[i][j] == 6) {
 				al_draw_bitmap(block6, i * 32 + 20, j * 32 + 20, 0);
+				map[i][j - 3] == FREE;
 			}
 			else if (map[i][j] == 7) {
 				al_draw_bitmap(block7, i * 32 + 20, j * 32 + 20, 0);
+				map[i][j - 3] == FREE;
 			}
-			map[i][j - 1] == FREE;
+			
 		}
 	}
 	for (int i = 0; i < 10; i++) {
